@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
-#include "atleta.h"
+#include "carrera.cpp"
 
-string whoIsFastest(Atleta a,Atleta b){
+/*string whoIsFastest(Atleta a,Atleta b){
   if(a.getTiempo()>b.getTiempo()){
     return a.getName();
   }
@@ -12,12 +12,18 @@ string whoIsFastest(Atleta a,Atleta b){
   else{
     return b.getName();
   }
-}
+}*/
 
 int main(){
+  Carrera c1(10);
   Atleta a1("Henry",290,"peruano",10.80);
   Atleta a2("Kevin El Veloz",291,"Mexicano",10.55);
-  bool c=a1<a2;
-  cout<<c<<endl;
+  Atleta a3("Stv  ",292,"Arequipenio",10.02);
+  c1.addAtletas(a1);
+  c1.addAtletas(a2);
+  c1.addAtletas(a3);
+  cout<<c1.fastest().getName()<<endl;
+  /*bool c=a1<a2;
+  cout<<c<<endl;*/
 }
 

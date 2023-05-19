@@ -1,3 +1,4 @@
+#include <iostream>
 #include <vector>
 #include "atleta.h"
 
@@ -15,7 +16,7 @@ class Carrera{
     Atleta max=atletas[0];
     for(int i=0;i<atletas.size();i++){
       cout<<"i"<<i<<endl;
-      if(atletas[0]>max){
+      if((atletas[0]<max)){
         max=atletas[i];
       }
     }

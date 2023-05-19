@@ -7,6 +7,7 @@ Atleta::Atleta(string nombre,int numero,string nacionalidad, double tiempo){
   this->tiempo=tiempo;
 }
 bool Atleta::operator<(Atleta otro){
+//  cout<<"algo"<<endl;
   return tiempo<otro.getTiempo();
 
 }
