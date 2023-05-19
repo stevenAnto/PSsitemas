@@ -22,7 +22,9 @@ int main(){
   c1.addAtletas(a1);
   c1.addAtletas(a2);
   c1.addAtletas(a3);
-  cout<<c1.fastest().getName()<<endl;
+  //Efecto de constante
+  Atleta ganador =c1.fastest();
+  cout<<ganador;
   /*bool c=a1<a2;
   cout<<c<<endl;*/
 }

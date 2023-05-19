@@ -15,8 +15,8 @@ class Carrera{
   Atleta fastest(){
     Atleta max=atletas[0];
     for(int i=0;i<atletas.size();i++){
-      cout<<"i"<<i<<endl;
-      if((atletas[0]<max)){
+      //cout<<"i"<<i<<endl;
+      if(!(atletas[0]<max)){
         max=atletas[i];
       }
     }

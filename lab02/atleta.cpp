@@ -14,9 +14,17 @@ bool Atleta::operator<(Atleta otro){
 string Atleta::getName (){
   return nombre;
 }
+string Atleta::getNacionalidad(){
+  return nacionalidad;
+}
 int Atleta::getNumero (){
   return numero;
 }
 double Atleta::getTiempo (){
   return tiempo;
+}
+ostream& operator<<(ostream& output,Atleta& a){
+  string aaa=a.getName()+"Tiempo: "+to_string(a.getTiempo())+"Nacionalidad: "+a.getNacionalidad();
+  output<<aaa;
+  return output;
 }
