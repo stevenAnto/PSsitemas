@@ -7,18 +7,31 @@
 using namespace std;
 void generarClientes(Cliente []);
 void mostrarClientes(Cliente []);
+void mostrarMorosos(Cliente []);
 
 int main(){
 
-srand(time(NULL));
+  srand(time(NULL));
   cout<<random;
 
   Cliente clientes[3];
   generarClientes(clientes);
   mostrarClientes(clientes);
+  mostrarMorosos(clientes);
   return 0;
 }
 
+void mostrarMorosos(Cliente clientes[3]){
+  cout<<"Clientes moroso : \n";
+  for(int i = 0;i < 3; i++){
+    if(clientes[i].estado==morosos){
+      cout<<clientes[i].nombre<<i<<
+        ", Unidades solicitadas: "<<clientes[i].unidadesSolicitadas<<
+        ", Precio: "<<clientes[i].precio<<", Estado: "<<
+        clientes[i].estado<<"\n";
+    }
+  }
+}
 void generarClientes(Cliente clientes[3]){
   //semilla para el numero random
   srand(time(NULL));
@@ -37,8 +50,6 @@ void mostrarClientes(Cliente clientes[3]){
       ", Unidades solicitadas: "<<clientes[i].unidadesSolicitadas<<
       ", Precio: "<<clientes[i].precio<<", Estado: "<<
       clientes[i].estado<<"\n";
-
-
   }
 
   cout<<"}"<<endl;
