@@ -1,0 +1,5 @@
+#!/bin/bash
+myvar=algo_insigni otra=otra
+echo "$myvar $otra"
+echo sdfsa sdfdsaf
+echo -n "entre your name:"
